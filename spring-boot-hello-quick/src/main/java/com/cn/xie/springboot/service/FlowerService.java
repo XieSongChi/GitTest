@@ -27,7 +27,6 @@ public class FlowerService {
     public Flower selFlowerById(Integer id){
         return flowerMapper.selFlowerById(id);
     }
-    @Cacheable(cacheNames = {"selectFlowerAll"})
     public List<Flower> selectFlowerAll(){
         return flowerMapper.selectFlowerAll();
     }
