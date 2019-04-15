@@ -30,7 +30,7 @@ public class FlowerService {
     public List<Flower> selectFlowerAll(){
         return flowerMapper.selectFlowerAll();
     }
-
+    //删除了
     public void insetFlower(Flower flower){
         flowerMapper.insetFlower(flower);
     }
