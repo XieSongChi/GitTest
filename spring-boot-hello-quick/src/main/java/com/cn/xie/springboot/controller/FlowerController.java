@@ -47,7 +47,6 @@ public class FlowerController {
     @PostMapping("/insertFlower")
     public String insertFlower(Flower flower){
         flowerService.insetFlower(flower);
-        System.out.println(flower.getUpdatetime());
         return "redirect:/flowers";
     }
     //修改数据

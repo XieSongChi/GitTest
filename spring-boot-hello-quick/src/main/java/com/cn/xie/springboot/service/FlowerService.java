@@ -4,6 +4,7 @@ import com.cn.xie.springboot.bean.Flower;
 import com.cn.xie.springboot.mapper.FlowerMapper;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -27,7 +28,7 @@ public class FlowerService {
     public Flower selFlowerById(Integer id){
         return flowerMapper.selFlowerById(id);
     }
-    @Cacheable(cacheNames = {"selectFlowerAll"})
+
     public List<Flower> selectFlowerAll(){
         return flowerMapper.selectFlowerAll();
     }
